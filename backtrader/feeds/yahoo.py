@@ -330,7 +330,7 @@ class YahooFinanceData(YahooFinanceCSVData):
                 continue
 
             ctype = resp.headers['Content-Type']
-            if 'text/csv' not in ctype:
+            if 'text/plain' not in ctype:
                 self.error = 'Wrong content type: %s' % ctype
                 continue  # HTML returned? wrong url?
 
